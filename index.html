@@ -1385,37 +1385,12 @@ a.reset-link {
       <!--NAVIGATION-->
       <nav ng-attr-role="{{ ::(previewMode ? &#39;presentation&#39; : &#39;navigation&#39;)}}" bb-translate-attrs="{&#39;aria-label&#39;: &#39;base.nav.title&#39;}" role="navigation" aria-label="Main">
         <ul ng-attr-id="{{ ::(previewMode ? &#39;&#39; : &#39;base_tools&#39;) }}" class="off-canvas-list" role="list" id="base_tools">
-          <!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
+          <!----><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
   <!-- Static -->
   <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
     <!---->
 
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.institution-page" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="institution.base.navigation.handleBase.link" aria-current="false" href="https://huskyct.uconn.edu/ultra/institution-page" tabindex="">
-      <ng-switch on="$ctrl.link.id">
-        <!---->
-        <!---->
-        <!----><div ng-switch-default="">
-          <bb-svg-icon icon="institution" size="medium" aria-hidden="true">
-    <svg class="svg-icon svg-icon-directive medium-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
-      <use xlink:href="https://huskyct.uconn.edu/ultra/grades#icon-medium-institution" ng-href="https://huskyct.uconn.edu/ultra/grades#icon-medium-institution"></use>
-    </svg>
-  </bb-svg-icon>
-          <span class="link-text" bb-translate="">Institution Page</span>
-        </div><!---->
-      </ng-switch>
-      <span class="round alert label ng-hide" ng-show="counts[$ctrl.link.id]"></span>
-    </a><!---->
-  </li><!---->
-
-  <!-- Integration -->
-  <!---->
-</div>
-</bb-base-navigation-button><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
-  <!-- Static -->
-  <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
-    <!---->
-
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.profile" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="profile.base.navigation.handleBase.link" aria-current="false" href="https://huskyct.uconn.edu/ultra/profile" tabindex="">
+    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.profile" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="profile.base.navigation.handleBase.link" aria-current="false" tabindex="">
       <ng-switch on="$ctrl.link.id">
         <!----><div class="ellipsis" ng-switch-when="profile">
           <bb-svg-icon icon="profile-user" size="medium" aria-hidden="true">
@@ -1423,7 +1398,7 @@ a.reset-link {
       <use xlink:href="https://huskyct.uconn.edu/ultra/grades#icon-medium-profile-user" ng-href="https://huskyct.uconn.edu/ultra/grades#icon-medium-profile-user"></use>
     </svg>
   </bb-svg-icon>
-          <bb-username id="sidebar-user-name" class="link-text username course_user_760911_1" user="$ctrl.user" auto-update="true"><!----><bb-ui-username ng-if="un.user" class="bb-ui-username" user="un.user" format="un.format" show-pronouns="un.showPronouns" show-pronunciation="un.showPronunciation" subtext="" on-username-click="onUsernameClick"><div class="makeStylesroot-0-2-66"><div class="makeStylesuserPronunciation-0-2-71"><bdi class="makeStylesbaseText-0-2-67">Ivan Antropov-Kalashnikov</bdi></div></div></bb-ui-username><!---->
+          <bb-username id="sidebar-user-name" class="link-text username course_user_760911_1" user="$ctrl.user" auto-update="true"><!----><bb-ui-username ng-if="un.user" class="bb-ui-username" user="un.user" format="un.format" show-pronouns="un.showPronouns" show-pronunciation="un.showPronunciation" subtext="" on-username-click="onUsernameClick"><div class="makeStylesroot-0-2-66"><div class="makeStylesuserPronunciation-0-2-71"><bdi class="makeStylesbaseText-0-2-67">Alex Antropov-Kalashnikov</bdi></div></div></bb-ui-username><!---->
 <!----><span ng-if="un.user" class="sr-only username-accommodation-content">
   <span class="username-has-accommodation">Has accommodations</span>
 </span><!---->
@@ -1439,203 +1414,7 @@ a.reset-link {
   <!-- Integration -->
   <!---->
 </div>
-</bb-base-navigation-button><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
-  <!-- Static -->
-  <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
-    <!---->
-
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.recentActivity" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="recentActivity.base.navigation.handleBase.link" aria-current="false" href="https://huskyct.uconn.edu/ultra/stream" tabindex="">
-      <ng-switch on="$ctrl.link.id">
-        <!---->
-        <!---->
-        <!----><div ng-switch-default="">
-          <bb-svg-icon icon="stream" size="medium" aria-hidden="true">
-    <svg class="svg-icon svg-icon-directive medium-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
-      <use xlink:href="https://huskyct.uconn.edu/ultra/grades#icon-medium-stream" ng-href="https://huskyct.uconn.edu/ultra/grades#icon-medium-stream"></use>
-    </svg>
-  </bb-svg-icon>
-          <span class="link-text" bb-translate="">Activity Stream</span>
-        </div><!---->
-      </ng-switch>
-      <span class="round alert label ng-hide" ng-show="counts[$ctrl.link.id]"></span>
-    </a><!---->
-  </li><!---->
-
-  <!-- Integration -->
-  <!---->
-</div>
-</bb-base-navigation-button><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
-  <!-- Static -->
-  <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
-    <!---->
-
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.courses" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="courses.base.navigation.handleBase.link" aria-current="false" href="https://huskyct.uconn.edu/ultra/course" tabindex="">
-      <ng-switch on="$ctrl.link.id">
-        <!---->
-        <!---->
-        <!----><div ng-switch-default="">
-          <bb-svg-icon icon="courses" size="medium" aria-hidden="true">
-    <svg class="svg-icon svg-icon-directive medium-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
-      <use xlink:href="https://huskyct.uconn.edu/ultra/grades#icon-medium-courses" ng-href="https://huskyct.uconn.edu/ultra/grades#icon-medium-courses"></use>
-    </svg>
-  </bb-svg-icon>
-          <span class="link-text" bb-translate="">Courses</span>
-        </div><!---->
-      </ng-switch>
-      <span class="round alert label ng-hide" ng-show="counts[$ctrl.link.id]"></span>
-    </a><!---->
-  </li><!---->
-
-  <!-- Integration -->
-  <!---->
-</div>
-</bb-base-navigation-button><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
-  <!-- Static -->
-  <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
-    <!---->
-
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.organizations" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="organizations.base.navigation.handleBase.link" aria-current="false" href="https://huskyct.uconn.edu/ultra/organization" tabindex="">
-      <ng-switch on="$ctrl.link.id">
-        <!---->
-        <!---->
-        <!----><div ng-switch-default="">
-          <bb-svg-icon icon="groups" size="medium" aria-hidden="true">
-    <svg class="svg-icon svg-icon-directive medium-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
-      <use xlink:href="https://huskyct.uconn.edu/ultra/grades#icon-medium-groups" ng-href="https://huskyct.uconn.edu/ultra/grades#icon-medium-groups"></use>
-    </svg>
-  </bb-svg-icon>
-          <span class="link-text" bb-translate="">Organizations</span>
-        </div><!---->
-      </ng-switch>
-      <span class="round alert label ng-hide" ng-show="counts[$ctrl.link.id]"></span>
-    </a><!---->
-  </li><!---->
-
-  <!-- Integration -->
-  <!---->
-</div>
-</bb-base-navigation-button><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
-  <!-- Static -->
-  <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
-    <!---->
-
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.calendar" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="calendar.base.navigation.handleBase.link" aria-current="false" href="https://huskyct.uconn.edu/ultra/calendar" tabindex="">
-      <ng-switch on="$ctrl.link.id">
-        <!---->
-        <!---->
-        <!----><div ng-switch-default="">
-          <bb-svg-icon icon="calendar" size="medium" aria-hidden="true">
-    <svg class="svg-icon svg-icon-directive medium-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
-      <use xlink:href="https://huskyct.uconn.edu/ultra/grades#icon-medium-calendar" ng-href="https://huskyct.uconn.edu/ultra/grades#icon-medium-calendar"></use>
-    </svg>
-  </bb-svg-icon>
-          <span class="link-text" bb-translate="">Calendar</span>
-        </div><!---->
-      </ng-switch>
-      <span class="round alert label ng-hide" ng-show="counts[$ctrl.link.id]"></span>
-    </a><!---->
-  </li><!---->
-
-  <!-- Integration -->
-  <!---->
-</div>
-</bb-base-navigation-button><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
-  <!-- Static -->
-  <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
-    <!---->
-
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.messages" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="messages.base.navigation.handleBase.link" aria-current="false" href="https://huskyct.uconn.edu/ultra/messages" tabindex="">
-      <ng-switch on="$ctrl.link.id">
-        <!---->
-        <!----><div ng-switch-when="messages">
-          <bb-ui-icon-with-badge color="brandAlternative" icon="$ctrl.link.iconElement" position="corner-top-right" show-badge="$ctrl.link.showBadge()" badge-content="$ctrl.link.badgeContent()" custom-badge-class="base-navigation-button-badge"><svg class="MuiSvgIconroot-0-2-139 makeStylesdirectionalIcon-0-2-138 makeStylesstrokeIcon-0-2-137" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="currentColor" stroke="transparent" fill-rule="evenodd" d="M1 3c-.5523 0-1 .4477-1 1v16c0 .5523.4477 1 1 1h22c.5523 0 1-.4477 1-1V4c0-.5523-.4477-1-1-1H1zm1 14.6093l5.9878-5.9053L2 6.2606v11.3487zm7.4698-4.5579L3.4381 19h17.1831c-.9709-.9686-1.8558-1.813-2.7194-2.6348l-.1643-.1563c-1.0608-1.0092-2.0994-1.9974-3.2234-3.1429l-1.8414 1.674a1.0002 1.0002 0 01-1.3454 0l-1.8575-1.6886zM22 6.2606v11.2899c-.976-.9727-1.8632-1.8194-2.7195-2.6342l-.1566-.149c-1.0479-.997-2.0508-1.9511-3.1289-3.0476L22 6.2606zM3.5866 5L12 12.6486 20.4134 5H3.5866z" clip-rule="evenodd"></path></svg></bb-ui-icon-with-badge>
-          <span class="link-text" bb-translate="">Messages</span>
-        </div><!---->
-        <!---->
-      </ng-switch>
-      <span class="round alert label ng-hide" ng-show="counts[$ctrl.link.id]"></span>
-    </a><!---->
-  </li><!---->
-
-  <!-- Integration -->
-  <!---->
-</div>
-</bb-base-navigation-button><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
-  <!-- Static -->
-  <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button active" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
-    <!---->
-
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.grades" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="grades.base.navigation.handleBase.link" aria-current="true" href="https://huskyct.uconn.edu/ultra/grades" tabindex="">
-      <ng-switch on="$ctrl.link.id">
-        <!---->
-        <!---->
-        <!----><div ng-switch-default="">
-          <bb-svg-icon icon="grades" size="medium" aria-hidden="true">
-    <svg class="svg-icon svg-icon-directive medium-icon default " focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
-      <use xlink:href="https://huskyct.uconn.edu/ultra/grades#icon-medium-grades" ng-href="https://huskyct.uconn.edu/ultra/grades#icon-medium-grades"></use>
-    </svg>
-  </bb-svg-icon>
-          <span class="link-text" bb-translate="">Grades</span>
-        </div><!---->
-      </ng-switch>
-      <span class="round alert label ng-hide" ng-show="counts[$ctrl.link.id]"></span>
-    </a><!---->
-  </li><!---->
-
-  <!-- Integration -->
-  <!---->
-</div>
-</bb-base-navigation-button><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
-  <!-- Static -->
-  <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
-    <!---->
-
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="base.tools" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="tools.base.navigation.handleBase.link" aria-current="false" href="https://huskyct.uconn.edu/ultra/tools" tabindex="">
-      <ng-switch on="$ctrl.link.id">
-        <!---->
-        <!---->
-        <!----><div ng-switch-default="">
-          <bb-svg-icon icon="tools" size="medium" aria-hidden="true">
-    <svg class="svg-icon svg-icon-directive medium-icon default " focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
-      <use xlink:href="https://huskyct.uconn.edu/ultra/grades#icon-medium-tools" ng-href="https://huskyct.uconn.edu/ultra/grades#icon-medium-tools"></use>
-    </svg>
-  </bb-svg-icon>
-          <span class="link-text" bb-translate="">Tools</span>
-        </div><!---->
-      </ng-switch>
-      <span class="round alert label ng-hide" ng-show="counts[$ctrl.link.id]"></span>
-    </a><!---->
-  </li><!---->
-
-  <!-- Integration -->
-  <!---->
-</div>
-</bb-base-navigation-button><!----><bb-base-navigation-button ng-repeat="link in links" link="link" user="user" role="listitem" preview-mode="previewMode"><div ng-switch="$ctrl.link.type">
-  <!-- Static -->
-  <!----><li ng-switch-when="static" role="presentation" class="base-navigation-button" ui-sref-active="active" ng-attr-aria-hidden="{{ ($ctrl.previewMode ? &#39;true&#39; : &#39;false&#39;) }}" aria-hidden="false">
-    <!---->
-
-    <!----><a ng-if="!$ctrl.link.disabled" class="base-navigation-button-content themed-background-primary-alt-fill-only theme-border-left-active" ui-sref="logout" bb-enter-key-up-focus=".base-skip-link .skip-link" bb-trigger-enter-keydown="true" ng-click="$ctrl.handleBaseLinkClick($event)" ng-attr-aria-label="{{ $ctrl.link.titleAriaLabel ? $ctrl.link.titleAriaLabel() : undefined }}" ng-attr-tabindex="{{ ($ctrl.previewMode ? &#39;-1&#39; : &#39;&#39;) }}" analytics-id="logout.base.navigation.handleBase.link" aria-current="false" href="https://huskyct.uconn.edu/ultra/logout" tabindex="">
-      <ng-switch on="$ctrl.link.id">
-        <!---->
-        <!---->
-        <!----><div ng-switch-default="">
-          <bb-svg-icon icon="logout" size="medium" aria-hidden="true">
-    <svg class="svg-icon svg-icon-directive medium-icon default directional-icon" focusable="false" aria-hidden="true" bb-cache-compilation="svg-icon">
-      <use xlink:href="https://huskyct.uconn.edu/ultra/grades#icon-medium-logout" ng-href="https://huskyct.uconn.edu/ultra/grades#icon-medium-logout"></use>
-    </svg>
-  </bb-svg-icon>
-          <span class="link-text" bb-translate="">Sign Out</span>
-        </div><!---->
-      </ng-switch>
-      <span class="round alert label ng-hide" ng-show="counts[$ctrl.link.id]"></span>
-    </a><!---->
-  </li><!---->
-
-  <!-- Integration -->
-  <!---->
-</div>
-</bb-base-navigation-button><!----></ul>
+</bb-base-navigation-button><!----><!----></ul>
       </nav>
     </div>
     <div class="side-menu-footer">
@@ -3582,7 +3361,7 @@ a.reset-link {
       <!----><bb-display-grade-pill ng-if="gradeDetail.isGraded() || gradeDetail.column.isCalculated()" grade="gradeDetail" column="gradeDetail.column" cursor="default"><!----><div class="grade-color" ng-class="{&#39;flex-column&#39;: displayGradePill.isStacked}" ng-if="!displayGradePill.isSchemaTypeComplete()">
     <div class="wrapping-input-style readonly pill-style  cursor-default green">
       <!----><div ng-if="!displayGradePill.shouldShowRubricButton()">
-        <span class="grade-input-display grade-ellipsis"><bdi>100 / 100</bdi></span>
+        <span class="grade-input-display grade-ellipsis"><bdi>96 / 100</bdi></span>
       </div><!---->
       <!---->
     </div>
@@ -4014,7 +3793,7 @@ a.reset-link {
       <!----><bb-display-grade-pill ng-if="gradeDetail.isGraded() || gradeDetail.column.isCalculated()" grade="gradeDetail" column="gradeDetail.column" cursor="default"><!----><div class="grade-color" ng-class="{&#39;flex-column&#39;: displayGradePill.isStacked}" ng-if="!displayGradePill.isSchemaTypeComplete()">
     <div class="wrapping-input-style readonly pill-style  cursor-default green">
       <!----><div ng-if="!displayGradePill.shouldShowRubricButton()">
-        <span class="grade-input-display grade-ellipsis"><bdi>100 / 100</bdi></span>
+        <span class="grade-input-display grade-ellipsis"><bdi>95 / 100</bdi></span>
       </div><!---->
       <!---->
     </div>
